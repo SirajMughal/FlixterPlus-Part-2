@@ -1,4 +1,4 @@
-Siraj Mughal
+Siraj Mughal\n
 The following **required** functionality is completed:
 
 - [✅] **Make a request to [The Movie Database API's `now_playing`](https://developers.themoviedb.org/3/movies/get-now-playing) endpoint to get a list of current movies**
