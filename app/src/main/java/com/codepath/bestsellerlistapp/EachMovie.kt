@@ -18,8 +18,14 @@ class EachMovie {
     var overview: String? = null
 
     @JvmField
-    @SerializedName("title")
+    @SerializedName("name")
     var title: String? = null
 
+    @JvmField
+    @SerializedName("first_air_date")
+    var airDate: String? = null
+
+    @SerializedName("backdrop_path")
+    var backdrop_path = "https://image.tmdb.org/t/p/w500/"
 
 }

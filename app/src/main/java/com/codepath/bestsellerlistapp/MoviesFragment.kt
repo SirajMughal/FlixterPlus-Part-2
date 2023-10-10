@@ -1,5 +1,6 @@
 package com.codepath.bestsellerlistapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -55,7 +56,7 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
 
         // Using the client, perform the HTTP request
         client[
-            "https://api.themoviedb.org/3/movie/now_playing?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed",
+            "https://api.themoviedb.org/3/tv/top_rated?api_key=a07e22bc18f5cb106bfe4cc1f83ad8ed",
             params,
             object : JsonHttpResponseHandler()
         {
@@ -106,7 +107,14 @@ class MoviesFragment : Fragment(), OnListFragmentInteractionListener {
      * What happens when a particular book is clicked.
      */
     override fun onItemClick(item: EachMovie) {
-        Toast.makeText(context, "test: " + item.title, Toast.LENGTH_LONG).show()
+        // Create an intent to launch MovieDetailsActivity
+        val intent = Intent(context, MovieDetailsActivity::class.java).apply {
+            putExtra("title", item.title)
+            putExtra("backdrop_path", item.backdrop_path)
+            putExtra("overview", item.overview)
+            putExtra("airDate", item.airDate) // Add this line to pass release date
+        }
+        context?.startActivity(intent)
     }
 
 }

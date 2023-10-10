@@ -32,7 +32,6 @@ class MoviesRecyclerViewAdapter(
     inner class MovieViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
         var mItem: EachMovie? = null
         val mMovieTitle: TextView = mView.findViewById<View>(id.title) as TextView
-        val mMovieOverview: TextView = mView.findViewById<View>(id.overview) as TextView
         val mMoviePoster: ImageView = mView.findViewById<View>(id.poster_path) as ImageView
     }
 
@@ -44,7 +43,6 @@ class MoviesRecyclerViewAdapter(
 
         holder.mItem = movie
         holder.mMovieTitle.text = movie.title
-        holder.mMovieOverview.text = movie.overview
 
         Glide.with(holder.mView)
             .load("https://image.tmdb.org/t/p/w500${movie.path}")
