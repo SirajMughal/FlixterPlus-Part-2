@@ -20,7 +20,7 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='flixterPlusPart2.gif' />
+<img src='FlixterPlusPart2.gif' />
 
 GIF created with ...  
 [ScreenToGif](https://www.screentogif.com/) for Windows
